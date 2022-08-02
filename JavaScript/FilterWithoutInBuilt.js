@@ -11,8 +11,7 @@ filterFunc = (age, calculate) => {
 };
 
 checkAdult = (age) => {
-    if(age >= 18)
-        return age;
+        return age >= 18;
 };
 
 console.log(filterFunc(age_list, checkAdult));
