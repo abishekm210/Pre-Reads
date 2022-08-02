@@ -1,14 +1,14 @@
 var arr_list = [1 ,2 ,3 ,4 ,5];
 
-calculate = function calculate(arr, multiplyBy2) {
+calculate = (arr, calculate) => {
     var result = [];
     for(var i = 0 ; i < arr.length ; i++){ 
-        result[i] = multiplyBy2(arr[i]);
+        result[i] = calculate(arr[i]);
     }
     return result;
 };
 
-multiplyBy2 = function multiplyBy2(number) {
+multiplyBy2 = (number) => {
     return number + 3;
 };
 
