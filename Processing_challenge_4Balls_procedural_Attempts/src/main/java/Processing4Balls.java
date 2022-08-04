@@ -5,8 +5,8 @@ public class Processing4Balls extends PApplet {
     public static final int WIDTH = 640;
     public static final int HEIGHT = 480;
     public static final int DIAMETER = 20;
-    int numberOfBalls = 4;
-    int balls[] = new int[numberOfBalls];
+    public int numberOfBalls = 4;
+    public int balls[] = new int[numberOfBalls];
 
     public static void main(String[] args) {
         PApplet.main("Processing4Balls", args);
