@@ -1,20 +1,13 @@
-
 public class Circle extends Frame{
     private int diameter;
-    private int ball1 = 0;
-    private int ball2 = 0;
-    private int ball3 = 0;
-    private int ball4 = 0;
+    private int numberOfBalls;
+    private int balls[];
 
     public int getPositionOfXAxis(int speed) {
-        switch(speed) {
-            case 1: ball1 += 1; return ball1;
-            case 2: ball2 += 2; return ball2;
-            case 3: ball3 += 3; return ball3;
-            case 4: ball4 += 4; return ball4;
-        }
-        return 0;
+        balls[speed-1] += speed;
+        return balls[speed-1];
     }
+
     public int getPositionOfYAxis(int unit, int height) {
         return (unit * height) / 5;
     }
@@ -25,5 +18,14 @@ public class Circle extends Frame{
 
     public int getDiameter() {
         return diameter;
+    }
+
+    public int getNumberOfBalls() {
+        return numberOfBalls;
+    }
+
+    public void setNumberOfBalls(int numberOfBalls) {
+        this.numberOfBalls = numberOfBalls;
+        balls = new int[numberOfBalls];
     }
 }
